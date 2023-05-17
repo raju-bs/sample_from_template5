@@ -1,21 +1,11 @@
 # vulnerable code
-let username = request.params.get('username');
-let password = request.params.get('password');
+import sys
 
-# check for valid input
-if (!username || !password) {
-	# return error
-	return response.status(400).send("Error: Invalid username or password");
-}
+print("sample python")
+print(os.path.abspath(__file__))
 
-# query database
-let queryString = `SELECT * FROM users WHERE username = '${username}' AND password = '${password}'`;
-let results = await db.query(queryString);
+os.system('dir')
 
-# return results if valid
-if (results.length > 0) {
-	return response.status(200).send(results);
-} else {
-	# return error
-	return response.status(400).send("Error: Invalid username or password");
-}
+input_location = 'C:\uptycs\githubquery\gitquery_arun\gittest\sample.py'
+split_list = os.path.split(input_location)
+print("split list: {}".format(split_list))
